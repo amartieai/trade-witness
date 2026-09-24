@@ -40,6 +40,39 @@ trade-witness record --duration 10  # capture 10s for a quick check
 trade-witness report --session <id> # read a session's receipts + triage
 ```
 
+## Try it in 30 seconds
+
+Clone, then run the built-in demo — no broker, no account, no risk:
+
+```bash
+git clone https://github.com/amartieai/trade-witness.git
+cd trade-witness
+python3 demo.py
+```
+
+It simulates one trading session, then edits a receipt behind its back. This is
+the actual output:
+
+```
+chain verifies: OK  (6 receipts)
+  [session_start   ]  broker app opened — screen capture ON
+  [screen_recording]  1920x1080 @ 30fps  sha=1f08aea043d5…
+  [broker_export   ]  fill MBT #A8813 @ 61,442.00  qty=1
+  [feed_pull_t0    ]  BTC 61,442.00  (moment of click)
+  [feed_pull_t1    ]  BTC 61,378.00  ← pulled again later
+  [session_seal    ]  triage: DISCREPANCY — the bar you bought the top of no longer shows that print
+```
+
+Now the "adversary" rewrites one price without fixing the hash:
+
+```
+before:  feed_pull_t0  price = 61,442.00
+after:   feed_pull_t0  price = 61,402.00   (hash NOT updated)
+chain verifies: CHAIN-BROKEN  (6 receipts)
+```
+
+The ledger noticed. That's the whole point: quiet edits don't stay quiet.
+
 ## How it protects you
 
 1. **Early pull** — your exporter is read *immediately*, so the record of a fill
