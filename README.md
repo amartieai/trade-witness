@@ -53,7 +53,7 @@ trade-witness report --session <id> # read a session's receipts + triage
 
 ## Positioning
 
-Trade Witness is a component of the **AMARTIE system** — AMARTIE's whole use
+Trade Witness is a component of the [**AMARTIE**](https://github.com/amartieai/amartie) system — AMARTIE's whole use
 case is to protect anyone at the kernel level of their entire machine, by
 witnessing everything impartially. Trading is the first door in because that's
 where the receipts already live; the same engine scales to files, processes,
