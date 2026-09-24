@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trade-witness"
+version = "0.1.0"
+description = "AMARTIE Trade Witness — automatic, always-on trading witness"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+trade-witness = "trade_witness.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["trade_witness*", "witness*"]
