@@ -92,6 +92,14 @@ witnessing everything impartially. Trading is the first door in because that's
 where the receipts already live; the same engine scales to files, processes,
 and network calls at the OS level.
 
+## Sibling tool
+
+- **[Tape Witness](https://github.com/amartieai/tape-witness)** — the forensic
+  grader: reconcile your own screen recording against the public record at the
+  exact minutes you acted, and grade the anomalies that cluster only on your
+  action minutes. Where Trade Witness records continuously, Tape Witness
+  proves a specific session. Ruler, not trader; names no platforms.
+
 ## Contribute
 
 MIT licensed. Pull requests welcome. See the `/witness` engine for the
