@@ -104,3 +104,9 @@ and network calls at the OS level.
 
 MIT licensed. Pull requests welcome. See the `/witness` engine for the
 reconciliation and grading rules that produce the receipts.
+
+## The witness family
+- [Witness Stand](https://github.com/amartieai/witness-stand) — a judge for the judges
+- [Tape Witness](https://github.com/amartieai/tape-witness) — the click-anomaly witness
+- The stand itself: [r/TheWitnessStand](https://www.reddit.com/r/TheWitnessStand/)
+- Home: [amartie.org](https://amartie.org)
